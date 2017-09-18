@@ -1,46 +1,37 @@
 <?php include 'header.php'; ?>
 
-<script>
-$('input[type="checkbox"]').on('change', function() {
-   $('input[type="checkbox"]').not(this).prop('checked', false);
-});
-</script>
-
-
-
-
 <main>
     <h1>Please select from the options below and we'll suggest your dream car!</h1>
-    <form action="." method="post" id="aligned">
-        <input type="hidden" name="action" value="add_technician">
+    <form action="carPicker.php" method="post" id="aligned">
+        <input type="hidden" name="action" value="carPicker">
 
         <label>Where do you live?</label>
-        	<select>
-  				<option value="NA">North America</option>
-  				<option value="EU">Europe</option>
+        <select name = "country">
+  				<option value="1">North America</option>
+  				<option value="2">Europe</option>
 			</select>
 		<br>
 
         <label>What type of car do you prefer?</label>
-        <select>
-  				<option value="Sports">Sports Car</option>
-  				<option value="Family">Family Car</option>
+        <select name = "cartype">
+  				<option value = "1">Sports Car</option>
+  				<option value = "2">Family Car</option>
 			</select>
 		<br>
 		
 		<div>
 		<label>Do you prefer new or used?</label>
          	<label>
-    			<input type="checkbox" class="radio" value="1" name="fooby[1][]" />New</label>
-  			<input type="checkbox" />
-  			
+    			<input type="radio" class="radio" name = "carneworused" value="New" checked> New <br>
+    			<input type="radio" class="radio" name = "carneworused" value="Used"> Used
+    		</label> 			
     	</div>
 		<br>
 		
 		
 
         <label>Please enter how many years you plan to own the car: </label>
-        <input type="number" name="lengthofownership"><br>		
+        <input type="number" name="lengthOfOwnership"><br>		
 		<h1>Please give us some info about your current trade in:</h1>
 		
 		<br>
