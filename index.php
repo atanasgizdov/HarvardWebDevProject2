@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'views/header.php'; ?>
 
 <main>
     <h1>Please select from the options below and we'll suggest your dream car!</h1>
@@ -47,4 +47,4 @@
     </form>
 
 </main>
-<?php include 'footer.php'; ?>
+<?php include 'views/footer.php'; ?>

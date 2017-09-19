@@ -68,12 +68,12 @@ p {
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+    margin: 15px;
+    padding: 15px;
 }
 li {
-    margin: 0;
-    padding: 0;
+    margin: 15px;
+    padding: 15px;
 }
 nav ul {
     list-style-type: none;
