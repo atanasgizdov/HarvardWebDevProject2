@@ -69,11 +69,11 @@ p {
 
 ul {
     margin: 15px;
-    padding: 15px;
+    padding: 0;
 }
 li {
     margin: 15px;
-    padding: 15px;
+    padding: 0;
 }
 nav ul {
     list-style-type: none;

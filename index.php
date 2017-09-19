@@ -1,5 +1,9 @@
 <?php include 'views/header.php'; ?>
 
+<script>
+	
+</script>
+
 <main>
     <h1>Please select from the options below and we'll suggest your dream car!</h1>
     <form action="carPicker.php" method="post" id="aligned">
@@ -40,7 +44,7 @@
         <input type="text" name="currentMake"><br>
 
         <label>Miles:</label>
-        <input type="number" name="currentMiles"><br>
+        <input type="number" name="currentMiles" required><br>
 
         <label>&nbsp;</label>
         <input type="submit" value="Submit"><br>
