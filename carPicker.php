@@ -27,15 +27,8 @@ $form = new Form($_POST);
 			'lengthOfOwnership' => 'numeric',
 			'currentMiles' => 'required',
 			'currentMiles' => 'numeric',
-			'currentMake' => 'alpha'
-			
-		]);
-		
-		if (!empty($errors)) {
-			header("location: index.php");
-			echo ("wtf");
-		}
-			
+			'currentMake' => 'alpha'		
+			]);		
 		}
 		
 	
@@ -46,9 +39,14 @@ $form = new Form($_POST);
 	$result = strval($car->getNewOrUsed($car)) ." ". strval($car->getCarType($car)) ." " .strval($car->getCarMake($car)) . "!" ;
 	
 	
-		
-	//display results page	
+	if (!empty($errors)) {
+			include('index.php');
+		}
+	else {
+		//display results page	
 	include('views/displayResults.php');
+	}
+	
     
 
  ?>

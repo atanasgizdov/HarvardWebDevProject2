@@ -9,7 +9,8 @@
     <h1>Please select from the options below and we'll suggest your dream car!</h1>
     <form action="carPicker.php" method="post" id="aligned">
         <input type="hidden" name="action" value="carPicker">
-        
+    
+    <div>   
         <?php if (isset($errors)) : ?>
 		<ul>
 			<?php foreach ($errors as $error) : ?>
@@ -17,6 +18,7 @@
 			<?php endforeach; ?>	
 		</ul>
 		<?php endif ?>	
+		
 
         <label>Where do you live?</label>
         <select name = "country">
@@ -45,13 +47,13 @@
 		
 
         <label>Please enter how many years you plan to own the car: </label>
-        <input type="number" name="lengthOfOwnership"><br>		
+        <input type="number" name="lengthOfOwnership" required><br>		
 		<h1>Please give us some info about your current trade in:</h1>
 		
 		<br>
 
         <label>Make:</label>
-        <input type="text" name="currentMake"><br>
+        <input type="text" name="currentMake" required><br>
 
         <label>Miles:</label>
         <input type="number" name="currentMiles" required><br>
