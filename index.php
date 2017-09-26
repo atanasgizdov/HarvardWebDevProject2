@@ -5,15 +5,25 @@
 </script>
 
 <main>
+			
     <h1>Please select from the options below and we'll suggest your dream car!</h1>
     <form action="carPicker.php" method="post" id="aligned">
         <input type="hidden" name="action" value="carPicker">
+        
+        <?php if (isset($errors)) : ?>
+		<ul>
+			<?php foreach ($errors as $error) : ?>
+				<li><?=$error?></li>
+			<?php endforeach; ?>	
+		</ul>
+		<?php endif ?>	
 
         <label>Where do you live?</label>
         <select name = "country">
   				<option value="1">North America</option>
   				<option value="2">Europe</option>
-			</select>
+		</select>
+		
 		<br>
 
         <label>What type of car do you prefer?</label>
