@@ -4,13 +4,14 @@
 	
 </script>
 
-<main>
+<form action="carPicker.php" method="post" id="aligned">
+	<input type="hidden" name="action" value="carPicker">
+
+	<main>
 			
     <h1>Please select from the options below and we'll suggest your dream car!</h1>
-    <form action="carPicker.php" method="post" id="aligned">
-        <input type="hidden" name="action" value="carPicker">
     
-    <div>   
+       
         <?php if (isset($errors)) : ?>
 		<ul>
 			<?php foreach ($errors as $error) : ?>
@@ -60,7 +61,7 @@
 
         <label>&nbsp;</label>
         <input type="submit" value="Submit"><br>
-    </form>
-
-</main>
+    
+    </main>
+</form>
 <?php include 'views/footer.php'; ?>
